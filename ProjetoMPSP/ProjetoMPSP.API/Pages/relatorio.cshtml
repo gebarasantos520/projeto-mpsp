@@ -1,0 +1,289 @@
+﻿@page "{id}"
+@model ProjetoMPSP.API.Pages.relatorioModel
+@{
+    ViewData["Title"] = "Relatorio";
+}
+
+<h1>Relatório Gerado:</h1>
+@if (Model.relatorio.Cadesp != null)
+{
+    <table>
+        <tr>
+            <td>CNPJ</td>
+            <td>Data de Inscrição no Estado</td>
+            <td>Documento de Registro Técnico</td>
+            <td>Inscrição Estadual</td>
+            <td>Número de Identificação do Registro de Empresas</td>
+            <td>Nome Empresarial</td>
+            <td>Nome Fantasia</td>
+            <td>Ocorrência Fiscal</td>
+            <td>Posto Fiscal</td>
+            <td>Regime Estadual</td>
+            <td>Situação</td>
+            <td>Situação Cadastral</td>
+            <td>Tipo de Unidade</td>
+            <td>Data de Inicio da Situação</td>
+            <td>Data da Inscrição Estadual</td>
+        </tr>
+        <tr>
+            <td>@Model.relatorio.Cadesp.CNPJ</td>
+            <td>@Model.relatorio.Cadesp.DataIE</td>
+            <td>@Model.relatorio.Cadesp.DRT</td>
+            <td>@Model.relatorio.Cadesp.IE</td>
+            <td>@Model.relatorio.Cadesp.NIRE</td>
+            <td>@Model.relatorio.Cadesp.NomeEmpresarial</td>
+            <td>@Model.relatorio.Cadesp.NomeFantasia</td>
+            <td>@Model.relatorio.Cadesp.OcorrenciaFiscal</td>
+            <td>@Model.relatorio.Cadesp.PostoFiscal</td>
+            <td>@Model.relatorio.Cadesp.RegimeEstadual</td>
+            <td>@Model.relatorio.Cadesp.Situacao</td>
+            <td>@Model.relatorio.Cadesp.SituacaoCadastral</td>
+            <td>@Model.relatorio.Cadesp.TipoUnidade</td>
+            <td>@Model.relatorio.Cadesp.DataInicioSituacao</td>
+            <td>@Model.relatorio.Cadesp.DataInscricaoEstado</td>
+        </tr>
+    </table>
+}
+
+@if (Model.relatorio.Arpensp != null)
+{
+    <table>
+        <tr>
+            <td>Cartório de Registro</td>
+            <td>Número do CNS</td>
+            <td>UF</td>
+            <td>Nome do Conjuge 1</td>
+            <td>Novo Nome do Conjuge 1</td>
+            <td>Nome do Conjuge 2</td>
+            <td>Novo Nome do Conjuge 2</td>
+            <td>Data do Casamento</td>
+            <td>Matrícula</td>
+            <td>Data de Entrada</td>
+            <td>Data do Registro</td>
+            <td>Acervo</td>
+            <td>Número do Livro</td>
+            <td>Número da Folha</td>
+            <td>Número do Registro</td>
+            <td>Tipo do Livro</td>
+        </tr>
+        <tr>
+            <td>@Model.relatorio.Arpensp.CartorioRegistro</td>
+            <td>@Model.relatorio.Arpensp.numeroCNS</td>
+            <td>@Model.relatorio.Arpensp.UF</td>
+            <td>@Model.relatorio.Arpensp.NomeConjuge1</td>
+            <td>@Model.relatorio.Arpensp.NomeNovoConjuge1</td>
+            <td>@Model.relatorio.Arpensp.NomeConjuge2</td>
+            <td>@Model.relatorio.Arpensp.NomeNovoConjuge2</td>
+            <td>@Model.relatorio.Arpensp.DataCasamento</td>
+            <td>@Model.relatorio.Arpensp.Matricula</td>
+            <td>@Model.relatorio.Arpensp.DataEntrada</td>
+            <td>@Model.relatorio.Arpensp.DataRegistro</td>
+            <td>@Model.relatorio.Arpensp.Acervo</td>
+            <td>@Model.relatorio.Arpensp.NumeroLivro</td>
+            <td>@Model.relatorio.Arpensp.NumeroFolha</td>
+            <td>@Model.relatorio.Arpensp.NumeroRegistro</td>
+            <td>@Model.relatorio.Arpensp.TipoLivro</td>
+        </tr>
+    </table>
+}
+
+@if (Model.relatorio.Siel != null)
+{
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Título</td>
+            <td>Data de Nascimento</td>
+            <td>Zona</td>
+            <td>Endereço</td>
+            <td>Município</td>
+            <td>UF</td>
+            <td>Data Domicílio</td>
+            <td>Nome Pai</td>
+            <td>Nome Mãe</td>
+            <td>Naturalidade</td>
+            <td>Código de Validação</td>
+        </tr>
+        <tr>
+            <td>@Model.relatorio.Siel.Nome</td>
+            <td>@Model.relatorio.Siel.Titulo</td>
+            <td>@Model.relatorio.Siel.DataNascimento</td>
+            <td>@Model.relatorio.Siel.Zona</td>
+            <td>@Model.relatorio.Siel.Endereco</td>
+            <td>@Model.relatorio.Siel.Municipio</td>
+            <td>@Model.relatorio.Siel.Uf</td>
+            <td>@Model.relatorio.Siel.DataDomicilio</td>
+            <td>@Model.relatorio.Siel.NomePai</td>
+            <td>@Model.relatorio.Siel.NomeMae</td>
+            <td>@Model.relatorio.Siel.Naturalidade</td>
+            <td>@Model.relatorio.Siel.CodigoValidacao</td>
+        </tr>
+    </table>
+}
+
+@if (Model.relatorio.Censec != null)
+{
+    <table>
+        <tr>
+            <td>Carga</td>
+            <td>Data Carga</td>
+            <td>Ato</td>
+            <td>Data do Ato</td>
+            <td>Livro</td>
+            <td>Folha</td>
+        </tr>
+        <tr>
+            <td>@Model.relatorio.Censec.Carga</td>
+            <td>@Model.relatorio.Censec.DataCarga</td>
+            <td>@Model.relatorio.Censec.Ato</td>
+            <td>@Model.relatorio.Censec.DataAto</td>
+            <td>@Model.relatorio.Censec.Livro</td>
+            <td>@Model.relatorio.Censec.Folha</td>
+        </tr>
+    </table>
+}
+
+@if (Model.relatorio.Caged != null)
+{
+    <h5>Responsavel pela Empresa</h5>
+    <table>
+        <tr>
+            <td>Razão Social</td>
+            <td>Documento</td>
+            <td>Logradouro</td>
+            <td>Bairro/Distrito</td>
+            <td>Município</td>
+            <td>UF</td>
+            <td>CEP</td>
+            <td>Nome</td>
+            <td>CPF</td>
+            <td>Telefone</td>
+            <td>Ramal</td>
+            <td>Email</td>
+        </tr>
+        <tr>
+            <td>@Model.relatorio.Caged.RazaoSocialNome</td>
+            <td>@Model.relatorio.Caged.Documento</td>
+            <td>@Model.relatorio.Caged.Logradouro</td>
+            <td>@Model.relatorio.Caged.BairroDistrito</td>
+            <td>@Model.relatorio.Caged.Municipio</td>
+            <td>@Model.relatorio.Caged.UF</td>
+            <td>@Model.relatorio.Caged.Cep</td>
+            <td>@Model.relatorio.Caged.Nome</td>
+            <td>@Model.relatorio.Caged.Cpf</td>
+            <td>@Model.relatorio.Caged.Telefone</td>
+            <td>@Model.relatorio.Caged.Email</td>
+        </tr>
+    </table>
+    <hr />
+    <h5>Dados da Empresa</h5>
+    <table>
+        <tr>
+            <td>CNPJ Raiz</td>
+            <td>Razão Social</td>
+            <td>Atividade Econômica (CNAE)</td>
+            <td>Número de Filiais</td>
+            <td>Admissões</td>
+            <td>Variação Absoluta</td>
+            <td>Total Vínculos</td>
+            <td>Desligamentos</td>
+            <td>1º dia</td>
+            <td>Último dia</td>
+        </tr>
+        <tr>
+            <td>@Model.relatorio.Caged.CnpjRaiz</td>
+            <td>@Model.relatorio.Caged.RazaoSocial</td>
+            <td>@Model.relatorio.Caged.AtividadeEconomica</td>
+            <td>@Model.relatorio.Caged.NumeroFiliais</td>
+            <td>@Model.relatorio.Caged.Admissoes</td>
+            <td>@Model.relatorio.Caged.VariacaoAbsoluta</td>
+            <td>@Model.relatorio.Caged.TotalVinculos</td>
+            <td>@Model.relatorio.Caged.Desligamentos</td>
+            <td>@Model.relatorio.Caged.PrimeiroDia</td>
+            <td>@Model.relatorio.Caged.UltimoDia</td>
+        </tr>
+    </table>
+    <hr />
+    <h5>Dados do Trabalhador</h5>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>PIS Base</td>
+            <td>CPF</td>
+            <td>CTPS/Série</td>
+            <td>Situação PIS</td>
+            <td>Nacionalidade</td>
+            <td>Grau de Instrução</td>
+            <td>Pessoa com Deficiência</td>
+            <td>Data de Nascimento</td>
+            <td>Sexo</td>
+            <td>Raça/Cor</td>
+            <td>CAGED(Tempo em Meses)</td>
+        </tr>
+        <tr>
+            <td>@Model.relatorio.Caged.NomeTrabalhador</td>
+            <td>@Model.relatorio.Caged.PisBase</td>
+            <td>@Model.relatorio.Caged.CpfTrabalhador</td>
+            <td>@Model.relatorio.Caged.Ctps</td>
+            <td>@Model.relatorio.Caged.Situacao</td>
+            <td>@Model.relatorio.Caged.Nacionalidade</td>
+            <td>@Model.relatorio.Caged.GrauInstrucao</td>
+            <td>@Model.relatorio.Caged.Deficiencia</td>
+            <td>@Model.relatorio.Caged.DataNascimento</td>
+            <td>@Model.relatorio.Caged.Sexo</td>
+            <td>@Model.relatorio.Caged.Raca</td>
+            <td>@Model.relatorio.Caged.TempoTrabalho</td>
+        </tr>
+    </table>
+}
+@if (Model.relatorio.Sivec != null)
+{
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Data de Nascimento</td>
+            <td>Sexo</td>
+            <td>RG</td>
+            <td>Tipo de RG</td>
+            <td>Data Emissão RG</td>
+            <td>Estado Civil</td>
+            <td>Naturalizado</td>
+            <td>Grau de Instrução</td>
+            <td>Nome do Pai</td>
+            <td>Nome da Mãe</td>
+            <td>Cor da Pele</td>
+            <td>Alcunha</td>
+            <td>Naturalidade</td>
+            <td>Posto de Identificação</td>
+            <td>Fórmula Fundamental</td>
+            <td>Cor dos Olhos</td>
+            <td>Cabelo</td>
+            <td>Profissão</td>
+            <td>Endereço Residencial</td>
+            <td>Endereço de Trabalho</td>
+        </tr>
+        <tr>
+            <td>@Model.relatorio.Sivec.Nome</td>
+            <td>@Model.relatorio.Sivec.DataNascimento</td>
+            <td>@Model.relatorio.Sivec.Sexo</td>
+            <td>@Model.relatorio.Sivec.Rg</td>
+            <td>@Model.relatorio.Sivec.TipoRg</td>
+            <td>@Model.relatorio.Sivec.DataEmissao</td>
+            <td>@Model.relatorio.Sivec.EstadoCivil</td>
+            <td>@Model.relatorio.Sivec.Naturalizado</td>
+            <td>@Model.relatorio.Sivec.GrauInstrucao</td>
+            <td>@Model.relatorio.Sivec.NomePai</td>
+            <td>@Model.relatorio.Sivec.NomeMae</td>
+            <td>@Model.relatorio.Sivec.CorPele</td>
+            <td>@Model.relatorio.Sivec.Alcunha</td>
+            <td>@Model.relatorio.Sivec.Naturalidade</td>
+            <td>@Model.relatorio.Sivec.Posto</td>
+            <td>@Model.relatorio.Sivec.Formula</td>
+            <td>@Model.relatorio.Sivec.CorOlho</td>
+            <td>@Model.relatorio.Sivec.Cabelo</td>
+            <td>@Model.relatorio.Sivec.Profissao</td>
+            <td>@Model.relatorio.Sivec.EnderecoResidencial</td>
+            <td>@Model.relatorio.Sivec.EnderecoTrabalho</td>
+        </tr>
+    </table>
+}

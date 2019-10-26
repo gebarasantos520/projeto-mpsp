@@ -1,0 +1,22 @@
+@import url("~bootstrap/dist/css/bootstrap.css");
+
+.background-gradient {
+    background: url(../img/gradiente.jpg) top repeat-y;
+    position: relative;
+}
+
+.bg-fiap{
+    background-color: #151819!important;
+}
+
+.text-fiap{
+    color: #ed145b!important;
+    -webkit-transition: color .5s ease;
+    transition: color .5s ease;
+}
+.text-fiap:hover{
+    color: #91a3ad!important;
+}
+
+.border-radius {border-radius: 10px;}
+.card-title {font-weight: bold;}
